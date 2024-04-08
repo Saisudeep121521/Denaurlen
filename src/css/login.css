@@ -1,0 +1,86 @@
+.main-content {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  border-radius: 20px;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.4);
+  display: flex;
+}
+.company__info {
+  background: rgba(247, 242, 255, 1);
+  color: #fff;
+}
+
+.loginCard {
+  width: 33rem !important;
+  padding: 0px 0px 0px 100px;
+  border: none;
+}
+
+.leftTitle {
+  padding: 0px 0px 0px 150px !important;
+}
+
+.bottomDetails {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 640px) {
+  .main-content {
+    width: 100%;
+  }
+  .company__info {
+    display: none;
+  }
+  .login_form .container form {
+    padding: 0px;
+    margin: 0px !important;
+    margin-left: 0px;
+  }
+  .loginCard {
+    width: 100% !important;
+    padding: 0px 0px 0px 0px !important;
+  }
+  .bottomDetails {
+    display: block;
+  }
+  .leftTitle {
+    padding: 0px 0px 0px 30px !important;
+  }
+}
+
+@media screen and (min-width: 642px) and (max-width: 800px) {
+  .main-content {
+    width: 100%;
+  }
+}
+
+.login_form {
+  background-color: #fff;
+  border-top: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+}
+form {
+  padding: 0 2em;
+}
+.form__input {
+  width: 100%;
+  border: 0px solid transparent;
+  border-radius: 0;
+  border-bottom: 1px solid #aaa;
+  padding: 1em 0.5em 0.5em;
+  padding-left: 2em;
+  outline: none;
+  margin: 1.5em auto;
+  transition: all 0.5s ease;
+}
+.form__input:focus {
+  border-bottom-color: #008080;
+  box-shadow: 0 0 5px rgba(0, 80, 80, 0.4);
+  border-radius: 4px;
+}
+
+.modal-content {
+  border-radius: 50px;
+}

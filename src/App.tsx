@@ -1,25 +1,32 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import GetStarted from './pages/GetStarted/GetStarted';
+import Login from './pages/Login/index';
+import { Provider } from 'react-redux';
+import store from './redux/store'; // Import your Redux store
+import Signup from './pages/Signup/Signup';
+import Categories from './pages/Categories/Categories';
+import Dashboard from './pages/Dashboard/Dashboard';
+import Suggestions from './pages/Suggestions/Suggestions';
+import Form from './pages/Form/Form';
 
-function App() {
+const App: React.FC = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Provider store={store}>
+      <Router>
+        <div className="App">
+          <Routes>
+            <Route path="/" element={<GetStarted />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/signup" element={<Signup/>} />
+            <Route path="/categories" element={ <Categories/>} />
+            <Route path="/dashboard" element={ <Dashboard/>} />
+            <Route path="/suggestions" element={ <Suggestions/>} />
+            <Route path="/form" element={ <Form/>} />
+          </Routes>
+        </div>
+      </Router>
+    </Provider>
   );
 }
 
